@@ -1,3 +1,9 @@
+# Jacob Windsor - Bayesian Statistics Exam 2019/2020
+
+This is a compiled document containing the code and output. All files can be found at [https://github.com/jacobwindsor/BIST_SDA_BAYESIAN](https://github.com/jacobwindsor/BIST_SDA_BAYESIAN)
+
+## Code
+```python
 import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
@@ -116,4 +122,30 @@ print(f"The predicted value for eta {n_text} the validity of the standard model.
 
 p_confirmed = predicted_p <= 0.75 + p_sd and predicted_p >= 0.75 - p_sd
 p_text = "confirms" if p_confirmed else "does not confirm"
-print(f"The predicted value for rho {p_text} the validity of the standard model.")
+print(f"The predicted value for eta {p_text} the validity of the standard model.")
+```
+
+## Output
+```
+Sample mean of n: 0.004007007506613073
+Sample mean of p 0.7514255564516957
+
+Sample standard deviations of n: 0.0033920588170428707
+Sample standard deviations of p: 0.017209825117467537
+
+Correlation coefficient: 0.47958948423117254
+
+The predicted value for eta does not confirm the validity of the standard model.
+The predicted value for rho confirms the validity of the standard model.
+```
+### Histogram of input data
+![](histogram.png)
+
+### Scatter plot of inferred rho and eta
+![](scatter.png)
+
+### Histogram of inferred rho values
+![](rho_hist.png)
+
+### Histogram of inferred eta values
+![](eta_hist.png)
